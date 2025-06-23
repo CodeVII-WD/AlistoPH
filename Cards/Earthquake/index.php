@@ -18,6 +18,22 @@ $isAdmin = false;
 <?php include("C:/xampp/htdocs/DisasterProj/shared/nav.php"); ?>
 
     <h1>This is for Earthquake</h1>
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            dito ilalagay mga records
+          </div>
+        </div>
+
+         <div class="col">
+          <div class="card">
+            dito ilalagay mga data records
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
         crossorigin="anonymous"></script>
