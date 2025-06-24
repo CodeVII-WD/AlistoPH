@@ -58,7 +58,7 @@
   <?php include("shared/nav.php"); ?>
 
 
-  <div class="container mt-4">
+  <div class="container mt-4 fade-in">
 
     <?php include("shared/carousel.php"); ?>
     

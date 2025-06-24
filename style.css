@@ -1,10 +1,9 @@
-
+/* Carousel Styles */
 #carouselExampleCaptions {
-  max-width: 900px;        
-  margin: 30px auto;       
-  border-radius: 40px;     
-  overflow: hidden;        
- 
+  max-width: 900px;
+  margin: 30px auto;
+  border-radius: 40px;
+  overflow: hidden;
 }
 
 #carouselExampleCaptions .carousel-item img {
@@ -20,6 +19,17 @@
   padding: 5px 20px;
 }
 
+/* Animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 
 
