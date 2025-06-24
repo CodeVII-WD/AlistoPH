@@ -77,21 +77,21 @@
       <div class="row h-100"></div>
     </div>
 
-  <div class="container my-5">
-    <div class="row">
-      <?php foreach ($disasters as $disaster): ?>
-        <div class="col-12 col-md-6 col-lg-4 mb-4">
-          <div class="card shadow h-100 rounded-3">
-            <img src="<?= $disaster['image'] ?>" class="card-img-top" alt="<?= $disaster['alt'] ?>" />
-            <div class="card-body">
-              <h5 class="card-title"><?= $disaster['title'] ?></h5>
-              <a href="<?= $disaster['link'] ?>" class="btn btn-primary">View</a>
-            </div>
+    <div class="container my-5">
+  <div class="row justify-content-center">
+    <?php foreach ($disasters as $disaster): ?>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+        <div class="card shadow h-100 rounded-3 disaster-card">
+          <img src="<?= $disaster['image'] ?>" class="card-img-top disaster-img" alt="<?= $disaster['alt'] ?>" />
+          <div class="card-body text-center">
+            <h5 class="card-title"><?= $disaster['title'] ?></h5>
+            <a href="<?= $disaster['link'] ?>" class="btn btn-primary btn-view">View</a>
           </div>
         </div>
-      <?php endforeach; ?>
-    </div>
+      </div>
+    <?php endforeach; ?>
   </div>
+</div>
 
   <div class="col-12" style="background-color: #180202">
     <ul class="text-white p-3">

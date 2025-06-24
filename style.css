@@ -25,11 +25,35 @@
     opacity: 0;
     transform: translateY(30px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
+.disaster-card {
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
 
+.disaster-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
 
+.disaster-img {
+  height: 180px;
+  object-fit: cover;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.btn-view {
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-view:hover {
+  background-color: #0056b3 !important;
+  transform: scale(1.05);
+}
