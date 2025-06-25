@@ -132,8 +132,11 @@ $username = $_SESSION['username'];
 </div>
 
 
-    
+    <footer class="text-white text-center py-4 mt-5" style="background-color: #791f2b;">
+        <p class="mb-0">© 2025 AlistoPH. Stay safe and informed.</p>
+    </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
