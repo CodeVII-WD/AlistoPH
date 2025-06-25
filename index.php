@@ -1,8 +1,10 @@
 <?php
+include("db_connection.php");
+
   date_default_timezone_set('Asia/Manila'); 
   $date = date("l, F j, Y"); 
 
-  $isAdmin = true;
+  $isAdmin = isset($_SESSION['isAdmin']) && $_SESSION['isAdmin'] === true;
   $Name = "Group 7";
 
   $currentTime = date("H");

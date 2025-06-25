@@ -20,13 +20,13 @@
     <!-- Navbar ito -->
     <div class="d-flex flex-row">
       <div class="me-2">
-        <a class="text-decoration-none text-dark" href="C:/xampp/htdocs/index.php">Home</a>
+        <a class="text-decoration-none text-dark" href="index.php">Home</a>
       </div>
       <div class="me-2">
         <a class="text-decoration-none text-dark" href="#">About</a>
       </div>
       <div class="me-2">
-        <a class="text-decoration-none text-dark" href="#">Login</a>
+      <a class="text-decoration-none text-dark" href="login.php">Login</a>
       </div>
     </div>
     
