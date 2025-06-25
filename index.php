@@ -1,11 +1,20 @@
 <?php
+
+session_start();
 include("db_connection.php");
+
+// Redirect to login page pag hindi nag logged in
+if (!isset($_SESSION['username'])) {
+    header("Location: login.php");
+    exit();
+}
+
+$username = $_SESSION['username'];
+
+
 
   date_default_timezone_set('Asia/Manila'); 
   $date = date("l, F j, Y"); 
-
-  $isAdmin = isset($_SESSION['isAdmin']) && $_SESSION['isAdmin'] === true;
-  $Name = "Group 7";
 
   $currentTime = date("H");
   $greeting = "";
@@ -17,7 +26,6 @@ include("db_connection.php");
   } else {
     $greeting = "Good Morning";
   }
-
 
   $disasters = [
     [
@@ -40,7 +48,7 @@ include("db_connection.php");
     ],
     [
       "title" => "Floods & Landslides",
-      "image" => "img/floods&landslides.png",
+      "image" => "img/flood123.png",
       "alt" => "Floods & Landslides",
       "link" => "Cards/Floods & Landslides/index.php"
     ],
@@ -95,13 +103,15 @@ include("db_connection.php");
   </div>
 </div>
 
-  <div class="col-12" style="background-color: #180202">
-    <ul class="text-white p-3">
+  <div class="col-12 px-5" style="background-color: #180202">
+    <div class="row"><ul class="text-white p-3">
       <strong>Hotlines:</strong><br />
       dito mga hotlines<br />
       more info here...
     </ul>
   </div>
+</div>
+    
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
 </body>
