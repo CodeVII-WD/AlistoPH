@@ -19,6 +19,21 @@
   padding: 5px 20px;
 }
 
+
+.line-indicator {
+  width: 60px;
+  height: 4px;
+  background-color: #ccc;
+  transition: background-color 0.3s ease;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.line-indicator.active {
+  background-color: #791f2b; 
+}
+
+
 /* Animation */
 @keyframes fadeInUp {
   0% {
@@ -56,4 +71,7 @@
 .btn-view:hover {
   background-color: #0056b3 !important;
   transform: scale(1.05);
+}
+body {
+  overflow-x: hidden;
 }

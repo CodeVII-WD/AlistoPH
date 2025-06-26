@@ -6,7 +6,7 @@ $isAdmin = false;
 ?>
 
 <head>
-  <?php include("C:/xampp/htdocs/DisasterProj/shared/head.php"); ?>
+  <?php include("C:/xampp/htdocs/alistoph/shared/head.php"); ?>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
@@ -14,7 +14,7 @@ $isAdmin = false;
 </head>
 
 <body>
-  <?php include("C:/xampp/htdocs/DisasterProj/shared/nav.php"); ?>
+  <?php include("C:/xampp/htdocs/alistoph/shared/nav.php"); ?>
 
   <div class="container mt-5">
     <h1>This is for Earthquakes</h1>
@@ -23,7 +23,7 @@ $isAdmin = false;
       <div class="row">
         <div class="col-6">
           <?php
-          include($_SERVER['DOCUMENT_ROOT'] . '/DisasterProj/db_connection.php');
+          include($_SERVER['DOCUMENT_ROOT'] . '/alistoph/db_connection.php');
 
           // Fetch data from the earthquakes table
           $sql = "SELECT location, magnitude, date FROM earthquakes ORDER BY date DESC";

@@ -68,24 +68,37 @@ $username = $_SESSION['username'];
   <?php include("shared/nav.php"); ?>
 
 
-  <div class="container mt-4 fade-in">
+  
+
+  <section id="home" class="d-flex align-items-center justify-content-start text-start text-white"
+           style="background: url('img/bg3.png') center center / cover no-repeat; height: 80vh; overflow-x: hidden; ">
+    <div class="container ps-md-5">
+      <h1 class="display-3 fw-bold">
+        Natural Disaster &<br>Emergencies
+      </h1>
+      <p class="lead">
+        Stay informed, prepared, and resilient in the face of nature's most powerful events.<br>
+        Knowledge is your first line of defense against disaster.
+      </p>
+    </div>
+  </section>
 
     <?php include("shared/carousel.php"); ?>
-    
 
-      <div class="col-md-6 text-center my-4 text-shadow">
-        <h2 class="fw-bold display-5">Stay <span style="color:rgb(81, 11, 11);">Aware</span>. Be Prepared.</h2>
-        <p class="lead text-dark">We never know what happens next.<br />Safety starts with you.</p>
+   <div class="container-fluid" style="background-color:rgb(86, 6, 6); height: 200px;">
+  <div class="row h-100">
+    <div class="col d-flex justify-content-center align-items-center">
+      <div class="info-bar d-flex flex-column flex-md-row align-items-center gap-4 px-4 py-3 text-white rounded-3" 
+           style="background-color:rgb(119, 21, 21); box-shadow: 0 8px 24px rgba(0,0,0,0.4); font-size: 1.1rem;">
+        <span>📞 <strong>Emergency Hotline</strong></span>
+        <span>🚨 <strong>National Emergency:</strong> 911</span>
+        <span>🆘 <strong>Medical Assistance:</strong> 143 or 8527-000</span>
       </div>
     </div>
   </div>
+</div>
 
-   <div
-      class="container-fluid"
-      style="background-color: #180202; height: 200px"
-    >
-      <div class="row h-100"></div>
-    </div>
+
 
     <div class="container my-5">
   <div class="row justify-content-center">
@@ -103,14 +116,22 @@ $username = $_SESSION['username'];
   </div>
 </div>
 
-  <div class="col-12 px-5" style="background-color: #180202">
-    <div class="row"><ul class="text-white p-3">
-      <strong>Hotlines:</strong><br />
-      dito mga hotlines<br />
-      more info here...
-    </ul>
+  <div class="col-12 px-4 py-5" style="background-color: #f9f6f6;">
+  <div class="text-center">
+    <h3 class="fw-bold mb-4" style="color: #2b2b2b; font-size: 2rem;">About our Organization</h3>
+
+    <h5 class="fw-bold mb-2" style="color: #791f2b; letter-spacing: 1px;">MISSION</h5>
+    
+    <p class="mx-auto" style="max-width: 800px; color: #444; font-size: 1.1rem; line-height: 1.8;">
+      We are committed to providing essential information and resources that help communities prepare for,
+      respond to, and recover from natural disasters and emergencies. Our mission is to build resilient
+      communities through education, awareness, and proactive preparedness. By empowering individuals with
+      the knowledge and tools they need, we strive to create a safer, more informed, and better-prepared society.
+    </p>
   </div>
 </div>
+
+
     
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
