@@ -108,7 +108,7 @@ $username = $_SESSION['username'];
           <img src="<?= $disaster['image'] ?>" class="card-img-top disaster-img" alt="<?= $disaster['alt'] ?>" />
           <div class="card-body text-center">
             <h5 class="card-title"><?= $disaster['title'] ?></h5>
-            <a href="<?= $disaster['link'] ?>" class="btn btn-primary btn-view">View</a>
+            <a href="<?= $disaster['link'] ?>" class="btn btn-primary">Learn More</a>
           </div>
         </div>
       </div>
