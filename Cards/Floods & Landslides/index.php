@@ -66,6 +66,50 @@ if ($result->num_rows > 0) {
             <p>Flooding is worsened by urban congestion, clogged waterways, and climate change.</p>
           </div>
         </div>
+        <div class="row row-cols-1 g-4">
+  <!-- Before -->
+  <div class="col">
+    <div class="card h-100 text-white" style="background: #36b9cc; border-radius: 12px;">
+      <div class="card-body">
+        <h5 class="card-title">🌧️ Before a Flood</h5>
+        <ul class="mb-0">
+          <li>Move valuables to higher ground.</li>
+          <li>Prepare emergency kit and documents.</li>
+          <li>Monitor weather updates and alerts.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- During -->
+  <div class="col">
+    <div class="card h-100 text-white" style="background: #2e59d9; border-radius: 12px;">
+      <div class="card-body">
+        <h5 class="card-title">🚨 During a Flood</h5>
+        <ul class="mb-0">
+          <li>Evacuate if advised by authorities.</li>
+          <li>Avoid walking or driving through floodwater.</li>
+          <li>Stay on high ground and stay safe.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- After -->
+  <div class="col">
+    <div class="card h-100 text-white" style="background: #858796; border-radius: 12px;">
+      <div class="card-body">
+        <h5 class="card-title">🌤️ After a Flood</h5>
+        <ul class="mb-0">
+          <li>Return home only when safe to do so.</li>
+          <li>Check for structural damage and hazards.</li>
+          <li>Clean and disinfect everything properly.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
       </div>
     </div>
   </div>

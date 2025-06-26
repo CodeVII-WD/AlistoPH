@@ -62,9 +62,53 @@ $isAdmin = true;
          <div class="p-3 border rounded bg-light">
            <h5>Did you know?</h5>
            <p>The Philippines is part of the Pacific Ring of Fire and has over 20 active volcanoes. Among the most destructive was the 1991 Mount Pinatubo eruption, one of the largest eruptions of the 20th century.</p>
-           <p>You can also add charts or maps here for visual data!</p>
+           
          </div>
        </div>
+       <div class="row row-cols-1 g-4">
+  
+  <div class="col">
+    <div class="card h-100 text-white" style="background: #d35400; border-radius: 12px;">
+      <div class="card-body">
+        <h5 class="card-title">🌋 Before a Volcanic Eruption</h5>
+        <ul class="mb-0">
+          <li>Know evacuation routes and shelters.</li>
+          <li>Prepare emergency kit with essentials.</li>
+          <li>Stay informed through official channels.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="col">
+    <div class="card h-100 text-white" style="background: #2c3e50; border-radius: 12px;">
+      <div class="card-body">
+        <h5 class="card-title">🔥 During a Volcanic Eruption</h5>
+        <ul class="mb-0">
+          <li>Seek shelter immediately in a safe area.</li>
+          <li>Stay indoors, keep windows closed.</li>
+          <li>Wear a mask to avoid inhaling ash.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="col">
+    <div class="card h-100 text-white" style="background: #34495e; border-radius: 12px;">
+      <div class="card-body">
+        <h5 class="card-title">🌥️ After a Volcanic Eruption</h5>
+        <ul class="mb-0">
+          <li>Wait for official "all-clear" before returning home.</li>
+          <li>Check for structural damage or ash buildup.</li>
+          <li>Clean ash from roofs and other surfaces.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
      </div>
    </div>
  </div>

@@ -17,7 +17,7 @@ $isAdmin = false;
   <?php include("C:/xampp/htdocs/Alistoph/shared/nav.php"); ?>
 
   <div class="container mt-5">
-    <h1>This is for Typhoon</h1>
+    <h1>Typhoon records</h1>
 
     <div class="con">
       <div class="row">
@@ -26,7 +26,7 @@ $isAdmin = false;
           include($_SERVER['DOCUMENT_ROOT'] . '/Alistoph/db_connection.php');
 
 
-          // Fetch data from the typhoons table
+          
           $sql = "SELECT name, affected_area, disaster_level FROM typhoon";
           $result = $conn->query($sql);
 
@@ -58,9 +58,60 @@ $isAdmin = false;
           ?>
         </div>
         <div class="col">
-          
-          <p>Design here...</p>
-        </div>
+  <div class="card border-0 rounded shadow-lg my-4">
+    <div class="card-body bg-dark text-white">
+      <h5 class="card-title">Did you know?</h5>
+      <p class="card-text">The Philippines is frequently affected by typhoons that cause widespread flooding. In 2009, Typhoon Ondoy brought one of the worst floods in Metro Manila’s history, submerging homes and roads.</p>
+      <p class="card-text">Flooding is worsened by urban congestion, clogged waterways, and climate change.</p>
+    </div>
+  </div>
+</div>
+
+        <div class="row row-cols-1 g-4">
+  <!-- "Before" -->
+  <div class="col">
+    <div class="card h-100 text-white" style="background: #4e73df; border-radius: 12px;">
+      <div class="card-body">
+        <h5 class="card-title">🌀 Before a Typhoon</h5>
+        <ul class="mb-0">
+          <li>Prepare emergency supplies.</li>
+          <li>Secure windows and loose outdoor items.</li>
+          <li>Know your evacuation routes.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="col">
+    <div class="card h-100 text-white" style="background: #1cc88a; border-radius: 12px;">
+      <div class="card-body">
+        <h5 class="card-title">🌧️ During a Typhoon</h5>
+        <ul class="mb-0">
+          <li>Stay indoors and away from windows.</li>
+          <li>Monitor official news updates.</li>
+          <li>Avoid using electrical appliances.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="col">
+    <div class="card h-100 text-white" style="background: #f6c23e; border-radius: 12px;">
+      <div class="card-body">
+        <h5 class="card-title">☀️ After a Typhoon</h5>
+        <ul class="mb-0">
+          <li>Check for hazards before going outside.</li>
+          <li>Help clean up debris safely.</li>
+          <li>Follow government instructions.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
       </div>
     </div>
   </div>
