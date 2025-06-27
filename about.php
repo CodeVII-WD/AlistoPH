@@ -128,7 +128,7 @@ $date = date("l, F j, Y");
     <div class="col-xl-2 col-md-4 col-sm-6 text-center">
       <a href="team_details.php?id=3" class="text-decoration-none">
         <div class="bg-white shadow-sm p-4 team-card h-100">
-          <img src="https://via.placeholder.com/150" class="team-img" alt="Member 3">
+          <img src="img/Mhae.jpeg" class="team-img" alt="Member 3">
           <div class="team-name">Jodiel Mhae Mores</div>
         </div>
       </a>
@@ -148,7 +148,7 @@ $date = date("l, F j, Y");
     <div class="col-xl-2 col-md-4 col-sm-6 text-center">
       <a href="team_details.php?id=5" class="text-decoration-none">
         <div class="bg-white shadow-sm p-4 team-card h-100">
-          <img src="https://via.placeholder.com/150" class="team-img" alt="Member 5">
+          <img src="img/ter.jpg" class="team-img" alt="Member 5">
           <div class="team-name">Jan Krister Larino</div>    
         </div>
       </a>
