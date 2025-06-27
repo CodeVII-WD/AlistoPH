@@ -68,6 +68,18 @@ $isAdmin = true;
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet" />
 </head>
+<style>
+  .disaster-title {
+    background-color:rgb(92, 2, 2); 
+    color: white; 
+    padding: 20px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    font-size: 3rem; 
+    text-align: center; 
+    margin-bottom: 30px; 
+}
+</style>
 <body>
 
 <?php
@@ -102,7 +114,7 @@ $date = date("l, F j, Y");
         <a class="text-decoration-none text-dark" href="admin.php">Home</a>
       </div>
       <div class="me-2">
-        <a class="text-decoration-none text-dark" href="about.php">About</a>
+        <a class="text-decoration-none text-dark" href="about.php">Team</a>
       </div>
       <div class="me-2">
         <a class="text-decoration-none text-dark btn btn-outline-dark" href="login.php">Logout</a>
@@ -161,7 +173,7 @@ $date = date("l, F j, Y");
   </div>
 </div>
 
-  <div class="col-12 px-4 py-5" style="background-color: #f9f6f6;">
+  <div class="col-12 px-4 py-5" style="background-color:rgb(243, 232, 232);">
   <div class="text-center">
     <h3 class="fw-bold mb-4" style="color: #2b2b2b; font-size: 2rem;">About our Organization</h3>
 
@@ -175,6 +187,69 @@ $date = date("l, F j, Y");
     </p>
   </div>
 </div>
+<div class="container my-5">
+        
+        <div class="row mb-4">
+            <div class="col">
+                <h1 class="disaster-title text-center">Natural Disasters in the Philippines</h1>
+                <p class="text-center">A summary of the major natural disasters: Typhoons, Floods, Earthquakes, and Volcanic Eruptions</p>
+            </div>
+        </div>
+
+        
+        <div class="row">
+            <div class="col-md-6">
+                <div class="disaster-section">
+                    <h2 class="disaster-subtitle">Typhoons</h2>
+                    <p>The Philippines is prone to typhoons, which are strong tropical storms that bring heavy rainfall, winds, and flooding. These storms are most common from June to November. Typhoons like Typhoon Haiyan (Yolanda) in 2013 have caused widespread devastation, especially in Eastern Visayas.</p>
+                    <p>Impact: Destruction of homes, loss of lives, and disruption of daily activities.</p>
+                    <p>Example Typhoons: Typhoon Yolanda (2013), Typhoon Ondoy (2009), Typhoon Agaton (2022).</p>
+                </div>
+            </div>
+
+            
+            <div class="col-md-6">
+                <div class="disaster-section">
+                    <h2 class="disaster-subtitle">Floods</h2>
+                    <p>Flooding is a common occurrence, especially in areas near rivers or coastal regions. It is often caused by heavy rains from typhoons or the southwest monsoon (Habagat). Flash floods can also occur due to deforestation and poor drainage systems.</p>
+                    <p>Impact: Infrastructure damage, displacement of people, loss of agricultural lands, and disruption of transportation.</p>
+                    <p>Example Flooding Events: Manila Floods (2009), Cagayan Valley Flooding (2020), Mindanao Floods (2022).</p>
+                </div>
+            </div>
+        </div>
+
+       
+        <div class="row">
+            <div class="col-md-6">
+                <div class="disaster-section">
+                    <h2 class="disaster-subtitle">Earthquakes</h2>
+                    <p>The Philippines is located along the Pacific Ring of Fire, making it vulnerable to earthquakes. While most earthquakes are not destructive, there are occasional large ones that cause significant damage. The 2013 Bohol earthquake is one example of a destructive earthquake in the country.</p>
+                    <p>Impact: Building collapse, landslides, injuries, and loss of lives.</p>
+                    <p>Example Earthquakes: Bohol Earthquake (2013), Davao del Sur Earthquake (2019), Surigao Earthquake (2017).</p>
+                </div>
+            </div>
+
+
+            <div class="col-md-6">
+                <div class="disaster-section">
+                    <h2 class="disaster-subtitle">Volcanic Eruptions</h2>
+                    <p>Volcanic eruptions are another common natural disaster in the Philippines, as the country is home to many active volcanoes. The most famous is Mayon Volcano in Albay, known for its perfect cone shape. Eruptions can be catastrophic, leading to ashfall, lava flows, and pyroclastic flows.</p>
+                    <p>Impact: Destruction of property, loss of life, disruption of air travel, and damage to agriculture.</p>
+                    <p>Example Volcanic Eruptions: Mount Pinatubo (1991), Mayon Volcano Eruptions (2000, 2018), Taal Volcano Eruption (2020).</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="disaster-section">
+                    <h2 class="disaster-subtitle">Conclusion</h2>
+                    <p>Natural disasters in the Philippines have caused widespread devastation over the years, but they have also led to greater awareness, better preparedness, and stronger resilience among Filipinos. Various government and non-government agencies have worked together to improve disaster response and risk management in the country.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 
     <footer class="text-white text-center py-4 mt-5" style="background-color: #791f2b;">

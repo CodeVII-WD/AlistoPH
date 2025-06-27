@@ -90,9 +90,7 @@ $date = date("l, F j, Y");
       <div class="me-2">
         <a class="text-decoration-none text-dark" href="admin.php">Home</a>
       </div>
-      <div class="me-2">
-        <a class="text-decoration-none text-dark" href="about.php">About</a>
-      </div>
+      
       <div class="me-2">
         <a class="text-decoration-none text-dark btn btn-outline-dark" href="login.php">Logout</a>
       </div>
@@ -162,24 +160,7 @@ $date = date("l, F j, Y");
     </a>
   </div>
 </div>
-<div class="container my-5">
-  <div class="row justify-content-center text-center">
-    <div class="col-md-8">
-      <h2 class="fw-bold text-dark mb-4">About Our Team</h2>
-      <p class="lead text-muted mb-4">
-      We are a group of passionate students with a strong interest in learning about technology. Each of us brings different skills and perspectives, but we share a common passion for expanding our knowledge and exploring new ideas.
-      <p class="text-muted mb-4">
-      Our team is built on the principles of collaboration and growth. While we are at the beginning of our journeys, we are eager to tackle challenges, learn from one another, and apply what we’ve learned to real-world problems. Our goal is to build projects that not only showcase our developing abilities but also help us gain hands-on experience in the tech field.      </p>
 
-      <p class="text-muted">
-      As students, we are constantly seeking opportunities to learn and improve. We believe that by working together, we can achieve more and develop skills that will help us grow both personally and professionally. We’re committed to learning, sharing knowledge, and making progress as we dive deeper into the world of technology.      </p>
-      
-      <div class="mt-5">
-        
-      </div>
-    </div>
-  </div>
-</div>
 
 
 </body>

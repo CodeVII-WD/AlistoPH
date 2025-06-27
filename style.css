@@ -75,3 +75,15 @@
 body {
   overflow-x: hidden;
 }
+
+        .disaster-subtitle {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #2980b9;
+        }
+        .disaster-section {
+            padding: 20px;
+            background-color: #ecf0f1;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }

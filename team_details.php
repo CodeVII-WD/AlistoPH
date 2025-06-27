@@ -72,9 +72,7 @@ $date = date("l, F j, Y");
       <div class="me-2">
         <a class="text-decoration-none text-dark" href="index.php">Home</a>
       </div>
-      <div class="me-2">
-        <a class="text-decoration-none text-dark" href="about.php">About</a>
-      </div>
+      
       <div class="me-2">
         <a class="text-decoration-none text-dark btn btn-outline-dark" href="login.php">Logout</a>
       </div>
