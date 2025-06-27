@@ -14,6 +14,7 @@ if (!isset($_SESSION['username'])) {
 }
 
 $username = $_SESSION['username'];
+$isAdmin = true;
 
 
 
@@ -88,6 +89,9 @@ $date = date("l, F j, Y");
     <div class="text-center me-auto ms-5">
       <div class="h5 text-dark my-0">
         <?= $date ?>
+        <?php if ($isAdmin) { ?>
+                <span class="badge rounded-pill text-bg-primary">Admin</span>
+              <?php } ?>
         
       </div>
     </div>

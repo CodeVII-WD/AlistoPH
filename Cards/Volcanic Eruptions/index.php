@@ -14,7 +14,7 @@ $isAdmin = true;
 </head>
  
 <body>
- <?php include("C:/xampp/htdocs/Alistoph/shared/nav.php"); ?>
+ <?php include("C:/xampp/htdocs/Alistoph/shared/navForCards.php"); ?>
  
  <div class="container mt-5">
    <h1 class="mb-4">Famous Volcanic Eruptions in the Philippines</h1>

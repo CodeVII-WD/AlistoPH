@@ -14,7 +14,7 @@ $isAdmin = false;
 </head>
 
 <body>
-  <?php include("C:/xampp/htdocs/alistoph/shared/nav.php"); ?>
+  <?php include("C:/xampp/htdocs/alistoph/shared/navForCards.php"); ?>
 
   <div class="container mt-5">
     <h1>Famous Earthquakes record</h1>
