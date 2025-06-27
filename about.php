@@ -82,7 +82,7 @@ $date = date("l, F j, Y");
     <div class="col-xl-2 col-md-4 col-sm-6 text-center">
       <a href="team_details.php?id=1" class="text-decoration-none">
         <div class="bg-white shadow-sm p-4 team-card h-100">
-          <img src="https://via.placeholder.com/150" class="team-img" alt="Member 1">
+          <img src="img/jay.png" class="team-img" alt="Member 1">
           <div class="team-name">Jay Fernandez</div>
         </div>
       </a>
@@ -92,7 +92,7 @@ $date = date("l, F j, Y");
     <div class="col-xl-2 col-md-4 col-sm-6 text-center">
       <a href="team_details.php?id=2" class="text-decoration-none">
         <div class="bg-white shadow-sm p-4 team-card h-100">
-          <img src="https://via.placeholder.com/150" class="team-img" alt="Member 2">
+          <img src="img/Brin.jpg" class="team-img" alt="Member 2">
           <div class="team-name">Patricia Brin</div>
         </div>
       </a>
@@ -112,7 +112,7 @@ $date = date("l, F j, Y");
     <div class="col-xl-2 col-md-4 col-sm-6 text-center">
       <a href="team_details.php?id=4" class="text-decoration-none">
         <div class="bg-white shadow-sm p-4 team-card h-100">
-          <img src="https://via.placeholder.com/150" class="team-img" alt="Member 4">
+          <img src="img/jim.png" class="team-img" alt="Member 4">
           <div class="team-name">Jimuel Villanueva</div>
         </div>
       </a>
@@ -132,7 +132,7 @@ $date = date("l, F j, Y");
 
   <div class="text-center back-btn">
     <a href="javascript:history.back()" class="btn btn-outline-dark d-inline-flex align-items-center">
-      <i class="button"></i>Back
+      <i class="b"></i>Back
     </a>
   </div>
 </div>

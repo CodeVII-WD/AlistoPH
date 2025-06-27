@@ -24,7 +24,7 @@ if (isset($_POST['username'])) {
         header("Location: admin.php");
         exit();
     } else {
-        echo "<div class='text-center text-danger mt-3'>NO SUCH USER</div>";
+      echo "<div class='text-center text-danger mt-3' style='font-weight:bold; font-size:25px; padding:10px;'>NO SUCH USER</div>";
     }
 }
 ?>
@@ -36,6 +36,55 @@ if (isset($_POST['username'])) {
    <?php include("shared/head.php") ?>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+    <style>
+    body {
+      background: url('img/bg.gif') no-repeat center center fixed;
+      background-size: cover;
+      height: 100vh;
+    }
+
+    .card {
+      background-color: rgba(255, 255, 255, 0.15); 
+      backdrop-filter: blur(5px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    }
+
+    .form-control {
+       background-color: rgba(0, 0, 0, 0.2);
+       border: 1px solid rgba(255, 255, 255, 0.25);
+       color: #fff;
+       backdrop-filter: blur(3px);
+       box-shadow: none;
+    }
+
+    .form-control::placeholder {
+      color: rgba(188, 184, 184, 0.7);
+    }
+
+    .form-control:focus {
+      background-color: rgba(255, 255, 255, 0.3);
+      color: #fff;
+      border-color: rgba(255, 255, 255, 0.5);
+      box-shadow: none;
+    }
+
+    .btn-primary {
+      background-color: rgba(13, 110, 253, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: #fff;
+      backdrop-filter: blur(3px);
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: rgba(13, 110, 253, 0.85); 
+      border-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+    }
+
+
+    </style>
 </head>
 
 <body>
@@ -43,8 +92,7 @@ if (isset($_POST['username'])) {
   <div class="card p-5 rounded-5 position-relative" style="width: 35rem;">
   <a href="login.php?logout=true" class="btn-close position-absolute top-0 end-0 m-3" aria-label="Close"></a>
 
-    <div class="h4 text-center mb-4">Admin Login</div>
-
+  <div class="h4 text-center mb-4 fw-bold" style="color:rgb(207, 207, 207);">Admin Login</div>
     <!-- Login Form -->
     <form method="post">
         <div class="my-4">

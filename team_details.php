@@ -87,8 +87,8 @@ $date = date("l, F j, Y");
     <h2 class="text-center fw-bold mb-4">Team Member Details</h2>
 
     <div class="text-center">
-      <img src="https://via.placeholder.com/200" class="team-detail-img mb-3" alt="Team Member">
-      <div class="team-detail-name"><?php echo $team_member['full_name']; ?></div>
+    <img src="<?= $team_member['image_path'] ?>" class="team-detail-img mb-3" alt="<?= $team_member['full_name'] ?>">
+    <div class="team-detail-name"><?php echo $team_member['full_name']; ?></div>
       <div class="team-detail-info">
         <p><strong>Role:</strong> <?php echo $team_member['role']; ?></p>
         <p><?php echo $team_member['bio']; ?></p>
