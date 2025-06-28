@@ -7,7 +7,16 @@ date_default_timezone_set('Asia/Manila');
 $date = date("l, F j, Y");
 ?>
 
-<div class="container-fluid shadow position-sticky top-0 z-1 bg-body" >
+<style>
+  .glass-navbar {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+</style>
+
+<div class="container-fluid shadow position-sticky top-0 z-1 glass-navbar">
   <div class="container py-3 d-flex align-items-center">
     
 

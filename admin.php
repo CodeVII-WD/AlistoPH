@@ -7,11 +7,6 @@ if (!isset($_SESSION['username'])) {
     header("Location: login.php");
     exit();
 }
-// Redirect to login page pag hindi nag logged in
-if (!isset($_SESSION['username'])) {
-    header("Location: login.php");
-    exit();
-}
 
 $username = $_SESSION['username'];
 $isAdmin = true;
@@ -79,6 +74,13 @@ $isAdmin = true;
     text-align: center; 
     margin-bottom: 30px; 
 }
+
+  .glass-navbar {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
 </style>
 <body>
 
@@ -91,7 +93,7 @@ date_default_timezone_set('Asia/Manila');
 $date = date("l, F j, Y");
 ?>
 
-<div class="container-fluid shadow position-sticky top-0 z-1 bg-body" >
+<div class="container-fluid shadow position-sticky top-0 z-1 glass-navbar">
   <div class="container py-3 d-flex align-items-center">
 
     <div class="h5 m-0" style="font-family: 'Montserrat', sans-serif;">
