@@ -3,14 +3,17 @@ include("db_connection.php");
 
 session_start();
 if (isset($_GET['logout'])) {
-    session_destroy();
-    header("Location: index.php");
-    exit();
+  session_start();
+  session_destroy();
+  header("Location: login.php");
+  exit();
 }
+
 
 if (isset($_POST['username'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
+    $_SESSION['fname'] = $row['fname'];
 
     $loginquery = "SELECT * FROM users WHERE username = '$username' AND password = '$password' LIMIT 1";
     $loginresult = mysqli_query($conn, $loginquery);
@@ -20,6 +23,7 @@ if (isset($_POST['username'])) {
 
         $_SESSION['userID'] = $row['userID'];
         $_SESSION['username'] = $row['username'];
+        $_SESSION['fname'] = $row['fname'];
         
         header("Location: admin.php");
         exit();
@@ -36,6 +40,7 @@ if (isset($_POST['username'])) {
    <?php include("shared/head.php") ?>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="icon" href="img/logo1.png">
 
     <style>
     body {

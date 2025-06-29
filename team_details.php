@@ -2,7 +2,6 @@
 session_start();
 include("db_connection.php");
 
-// Check if user is logged in
 if (!isset($_SESSION['username'])) {
     header("Location: login.php");
     exit();
@@ -24,13 +23,16 @@ if ($result && mysqli_num_rows($result) > 0) {
 
 <!DOCTYPE html>
 <html lang="en">
+  
 <head>
+<link rel="icon" href="img/logo1.png">
+
   <title>Team Member Details</title>
   <?php include("shared/head.php"); ?>
   <style>
 
     body {
-      background-color:rgba(185, 185, 185, 0.74);
+      background-color:rgba(210, 210, 210, 0.75);
     }
 
     .team-detail-img {
@@ -81,12 +83,12 @@ $date = date("l, F j, Y");
     <!-- Navbar links -->
     <div class="d-flex ms-auto align-items-center gap-2">
       <div class="me-2">
-        <a class="text-decoration-none text-dark" href="index.php">Home</a>
+        <a class="text-decoration-none text-dark" href="admin.php">Home</a>
       </div>
       
       <div class="me-2">
-        <a class="text-decoration-none text-dark btn btn-outline-dark" href="login.php">Logout</a>
-      </div>
+      <a href="login.php?logout=true" class="text-decoration-none text-dark btn btn-outline-dark"
+      onclick="return confirmLogout()">Logout</a>      </div>
     </div>
 
   </div>
@@ -110,5 +112,16 @@ $date = date("l, F j, Y");
       <a href="about.php" class="btn btn-outline-dark">Back to Team</a>
     </div>
   </div>
+
+  <footer class="text-white text-center py-4 mt-5" style="background-color: #791f2b;">
+        <p class="mb-0">© 2025 AlistoPH. Stay safe and informed.</p>
+    </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  function confirmLogout() {
+    return confirm("Are you sure you want to log out?");
+  }
+</script>
 </body>
 </html>

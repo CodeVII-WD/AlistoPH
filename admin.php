@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 include("db_connection.php");
 
@@ -8,52 +7,61 @@ if (!isset($_SESSION['username'])) {
     exit();
 }
 
+if (isset($_GET['logout'])) {
+    session_unset();    
+    session_destroy();    
+    header("Location: login.php");
+    exit();
+}
+
+if (!isset($_SESSION['username'])) {
+    header("Location: login.php");
+    exit();
+}
 $username = $_SESSION['username'];
-$isAdmin = true;
+$fname = isset($_SESSION['fname']) ? $_SESSION['fname'] : "";
 
+date_default_timezone_set('Asia/Manila'); 
+$date = date("l, F j, Y"); 
 
+$currentTime = date("H");
+$greeting = "";
 
-  date_default_timezone_set('Asia/Manila'); 
-  $date = date("l, F j, Y"); 
+if($currentTime > 18){
+  $greeting = "Good Evening";
+} elseif ($currentTime >= 12) {
+  $greeting = "Good Afternoon";
+} else {
+  $greeting = "Good Morning";
+}
 
-  $currentTime = date("H");
-  $greeting = "";
-
-  if($currentTime > 18){
-    $greeting = "Good Evening";
-  } elseif ($currentTime >= 12) {
-    $greeting = "Good Afternoon";
-  } else {
-    $greeting = "Good Morning";
-  }
-
-  $disasters = [
-    [
-      "title" => "Typhoons",
-      "image" => "img/Typhoon.png",
-      "alt" => "Typhoon",
-      "link" => "Cards/Typhoons/index.php"
-    ],
-    [
-      "title" => "Earthquake",
-      "image" => "img/Earthquake.png",
-      "alt" => "Earthquake",
-      "link" => "Cards/Earthquake/index.php"
-    ],
-    [
-      "title" => "Volcanic Eruptions",
-      "image" => "img/Volcano.png",
-      "alt" => "Volcano",
-      "link" => "Cards/Volcanic Eruptions/index.php"
-    ],
-    [
-      "title" => "Floods & Landslides",
-      "image" => "img/flood123.png",
-      "alt" => "Floods & Landslides",
-      "link" => "Cards/Floods & Landslides/index.php"
-    ],
-    
-  ];
+$disasters = [
+  [
+    "title" => "Typhoons",
+    "image" => "img/Typhoon.png",
+    "alt" => "Typhoon",
+    "link" => "Cards/Typhoons/index.php"
+  ],
+  [
+    "title" => "Earthquake",
+    "image" => "img/Earthquake.png",
+    "alt" => "Earthquake",
+    "link" => "Cards/Earthquake/index.php"
+  ],
+  [
+    "title" => "Volcanic Eruptions",
+    "image" => "img/Volcano.png",
+    "alt" => "Volcano",
+    "link" => "Cards/Volcanic Eruptions/index.php"
+  ],
+  [
+    "title" => "Floods & Landslides",
+    "image" => "img/flood123.png",
+    "alt" => "Floods & Landslides",
+    "link" => "Cards/Floods & Landslides/index.php"
+  ],
+  
+];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -61,6 +69,7 @@ $isAdmin = true;
   <?php include("shared/head.php") ?>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="img/logo1.png">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet" />
 </head>
 <style>
@@ -81,17 +90,12 @@ $isAdmin = true;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
+
+    .function confirmLogout() {
+    return confirm('Are you sure you want to log out?');
+  }
 </style>
 <body>
-
-<?php
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
-}
-
-date_default_timezone_set('Asia/Manila');
-$date = date("l, F j, Y");
-?>
 
 <div class="container-fluid shadow position-sticky top-0 z-1 glass-navbar">
   <div class="container py-3 d-flex align-items-center">
@@ -103,10 +107,11 @@ $date = date("l, F j, Y");
     <div class="text-center me-auto ms-5">
       <div class="h5 text-dark my-0">
         <?= $date ?>
-        <?php if ($isAdmin) { ?>
-                <span class="badge rounded-pill text-bg-primary">Admin</span>
-              <?php } ?>
-        
+        <?php if (!empty($fname)): ?>
+            <span class="badge rounded-pill text-bg-primary">
+                <?= htmlspecialchars($fname) ?>
+            </span>
+        <?php endif; ?>
       </div>
     </div>
 
@@ -119,7 +124,8 @@ $date = date("l, F j, Y");
         <a class="text-decoration-none text-dark" href="about.php">Team</a>
       </div>
       <div class="me-2">
-        <a class="text-decoration-none text-dark btn btn-outline-dark" href="login.php">Logout</a>
+<a href="login.php?logout=true" class="text-decoration-none text-dark btn btn-outline-dark"
+   onclick="return confirmLogout()">Logout</a>
       </div>
     </div>
 
@@ -259,6 +265,11 @@ $date = date("l, F j, Y");
     </footer>
 
 
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  function confirmLogout() {
+    return confirm("Are you sure you want to log out?");
+  }
+</script>
 </body>
 </html>

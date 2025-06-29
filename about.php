@@ -21,6 +21,7 @@ $isAdmin = true;
 <head>
   <?php include("shared/head.php") ?>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="icon" href="img/logo1.png">
   <style>
 
     body {
@@ -123,12 +124,15 @@ $date = date("l, F j, Y");
     </div>
 
     <div class="text-center me-auto ms-5">
-      <div class="h5 text-dark my-0">
-        <?= $date ?>
-        <?php if ($isAdmin) { ?>
-          <span class="badge rounded-pill text-bg-primary">Admin</span>
-        <?php } ?>
-      </div>
+    <div class="h5 text-dark my-0">
+    <?= $date ?>
+    <?php if (isset($_SESSION['fname'])): ?>
+        <span class="badge rounded-pill text-bg-primary">
+            <?= htmlspecialchars($_SESSION['fname']) ?>
+        </span>
+    <?php endif; ?>
+</div>
+
     </div>
 
     <div class="d-flex ms-auto align-items-center gap-2">
@@ -137,8 +141,8 @@ $date = date("l, F j, Y");
       </div>
       
       <div class="me-2">
-      <a class="text-decoration-none text-dark btn btn-outline-dark" href="?logout=true">Logout</a>
-      </div>
+      <a href="login.php?logout=true" class="text-decoration-none text-dark btn btn-outline-dark"
+      onclick="return confirmLogout()">Logout</a>      </div>
     </div>
   </div>
 </div>
@@ -200,5 +204,11 @@ $date = date("l, F j, Y");
         <p class="mb-0">© 2025 AlistoPH. Stay safe and informed.</p>
     </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  function confirmLogout() {
+    return confirm("Are you sure you want to log out?");
+  }
+</script>
 </body>
 </html>
